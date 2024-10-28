@@ -1,5 +1,7 @@
+import 'package:demoap/controller.dart';
 import 'package:demoap/idcard.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,13 +44,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    IdController idcont = Get.put(IdController());
     return Scaffold(
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => IDCard()),
-              );
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const IDcardWidget(
+                            name: 'Sarangthem Amarjit ',
+                            phone: '7005191566',
+                            emergennumber: '94366615141',
+                            email: 'sara@gmail.com',
+                            membershipsid: 1234552412,
+                            address: 'Langthabal Lep Makha Leikai',
+                          )));
             },
             child: const Text('Generate ID Card')),
       ),

@@ -39,6 +39,8 @@ dependencies:
   barcode_widget: ^2.0.4
   printing: ^5.13.3
   screenshot: ^3.0.0
+  js: ^0.7.1
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
